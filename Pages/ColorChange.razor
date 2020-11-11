@@ -1,0 +1,15 @@
+@page "/color-change"
+
+<h1>Color Change</h1>
+
+<button class='btn @(Color ? "btn-primary" : "btn-warning")' @onclick="@ChangeColor">Change color</button>
+
+
+@functions {
+    private bool Color { get; set; } = true;
+
+    private void ChangeColor()
+    {
+        Color = !Color;
+    }
+}
